@@ -27,7 +27,7 @@
 # SOFTWARE.
 
 # Neofetch version.
-version="4.0.1"
+version="4.0.2"
 
 bash_version="${BASH_VERSION/.*}"
 sys_locale="${LANG:-C}"
@@ -826,12 +826,6 @@ image_host="teknik"
 # Default: 'off'
 # Values: 'on', 'off'
 stdout="off"
-
-# Config version.
-#
-# NOTE: Don't change this value, neofetch reads this to determine
-# how to handle backwards compatibility.
-config_version="4.0.1"
 EOF
 
 # DETECT INFORMATION
@@ -3692,6 +3686,11 @@ get_term_size() {
         term_width="${term_size[2]/t*}"
     fi
 
+    # If the sequences above don't work and the user is on a macOS system
+    # or a system not running an X server, return early.
+    [[ -z "$DISPLAY" || "$os" == "Mac OS X" ]] && \
+        { term_width=0; return; }
+
     # Get terminal width/height if \e[14t is unsupported.
     if [[ -z "$term_width" ]] || (( "$term_width" < 50 )); then
         if type -p xdotool >/dev/null 2>&1; then
@@ -4815,6 +4814,7 @@ SCREENSHOT:
 OTHER:
     --config /path/to/config    Specify a path to a custom config file
     --config none               Launch the script without a config file
+    --print_config              Print the default config file to stdout.
     --stdout                    Turn off all colors and disables any ASCII/image backend.
     --help                      Print this text and exit
     --version                   Show neofetch version
@@ -5007,6 +5007,7 @@ get_args() {
             ;;
             "--stdout") stdout="on" ;;
             "-v") verbose="on" ;;
+            "--print_config") printf "%s\\n" "$config"; exit ;;
             "-vv") set -x; verbose="on" ;;
             "--help") usage ;;
             "--version")
@@ -8679,7 +8680,7 @@ main() {
     get_os
 
     # Load default config.
-    source /dev/stdin <<< "$config"
+    eval "$config"
 
     get_args "$@"
     [[ "$verbose" != "on" ]] && exec 2>/dev/null
@@ -8713,7 +8714,6 @@ main() {
     # Add neofetch info to verbose output.
     err "Neofetch command: $0 $*"
     err "Neofetch version: $version"
-    err "Neofetch config:  $config_version"
 
     # Show error messages.
     [[ "$verbose" == "on" ]] && printf "%b" "$err" >&2
