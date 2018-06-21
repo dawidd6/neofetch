@@ -1,0 +1,3 @@
+version=4
+
+https://github.com/dylanaraps/neofetch/releases .*/archive/(.+)\.tar\.gz
