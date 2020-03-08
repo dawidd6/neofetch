@@ -4,6 +4,3 @@ include /usr/share/dpkg/pkg-info.mk
 
 %:
 	dh $@
-
-get-orig-source:
-	wget https://github.com/dylanaraps/$(DEB_SOURCE)/archive/$(DEB_VERSION_UPSTREAM).tar.gz -O ../$(DEB_SOURCE)_$(DEB_VERSION_UPSTREAM).orig.tar.gz
