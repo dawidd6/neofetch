@@ -1,3 +1,717 @@
+neofetch (7.0.0-1) xenial; urgency=medium
+
+  [ Dylan Araps ]
+  * misc: cleanup
+  * misc: Check if xprop is installed
+  * term: Show URxvtd as URxvt
+  * term: [urxvt/xterm] Show greedy fonts.
+  * misc: cleanup
+
+  [ tsumiki.neko ]
+  * add januslinux
+
+  [ Dylan Araps ]
+  * misc: cleanup
+  * gpu: Change Xeon output to HD Graphics
+  * docs: update
+  * wallpaper: Fixed GNOME support. Closes #1037
+  * misc: cleanup
+
+  [ Dawid Dziurla ]
+  * add debian/watch
+
+  [ Albert ]
+  * Fix #1039
+
+  [ Dawid Dziurla ]
+  * simplify debian/watch url
+
+  [ Erik Dubois ]
+  * Update neofetch
+
+  [ Dylan Araps ]
+  * misc: Fixed substitutions.
+  * cpu: Use sysctl on NetBSD. Closes #1041
+
+  [ Tony ]
+  * Fix cannot correctly get window size
+
+  [ William Gathoye ]
+  * Add Proxmox VE
+
+  [ Charlène ]
+  * battery/OpenBSD: improved charge%, adds status
+
+  [ Ain ]
+  * Fix borked version display for mksh
+
+  [ Muhammad Herdiansyah ]
+  * GPU [AMD]: Remove an unnecessary pattern check
+
+  [ Alyssa Ross ]
+  * Add support for Nix packages on macOS
+
+  [ Muhammad Herdiansyah ]
+  * docs: changelog
+
+  [ plgruener ]
+  * add term-font support for yakuake
+
+  [ xynxynxyn ]
+  * make seperator changeable
+
+  [ plgruener ]
+  * add color-reset to ascii logo drawing
+  * fix arch_small logo
+
+  [ Muhammad Herdiansyah ]
+  * docs: changelog
+  * Packages: pkginfo is used by CRUX and JanusLinux
+  * docs: changelog
+
+  [ xynxynxyn ]
+  * replace if statement with parameter expansion
+
+  [ Muhammad Herdiansyah ]
+  * get_ascii: Do not parse file if it's an image file
+  * get_window_size: Set read timeout as 1
+  * docs: changelog
+
+  [ nikitenich ]
+  * Improve Hackintosh detection
+
+  [ Muhammad Herdiansyah ]
+  * trim: Remove additional space during trimming
+  * Misc: Apply existing PATH first before applying fallback values.
+
+  [ Charlène ]
+  * Multiple fixes, OpenBSD related
+
+  [ Matt Mathis ]
+  * Updated to fix new kitty bug prior to kitty fixes
+
+  [ Muhammad Herdiansyah ]
+  * Disk [OpenBSD]: Detect df version through usual df check instead of making a special if uname check
+  * docs: changelog
+  * docs: changelog
+  * docs: changelog
+
+  [ Snuggle ]
+  * Update config comment with kitty backend.
+
+  [ Michael Straube ]
+  * OS: Add Namib GNU/Linux
+
+  [ appadeia ]
+  * Add support for puyo & spm
+
+  [ Dylan Araps ]
+  * general: fixed config issue. Closes #1088
+  * general: revert change.
+  * general: Faster grep
+  * general: Faster read on newer bash
+
+  [ xynxynxyn ]
+  * add documentation
+  * use correct apostrophe
+
+  [ Dylan Araps ]
+  * docs: update
+
+  [ Andrew Titmuss ]
+  * get_memory: fix awk for vm_stat on macOS
+  * get_song: stop iTunesHelper from being detected
+  * OS: Add Reborn OS
+
+  [ marlonn ]
+  * new logo for Lubuntu
+
+  [ Muhammad Herdiansyah ]
+  * Distro: Add support for OpenMandriva Lx
+  * Memory [Solaris]: Detect using a new method using pages
+  * Misc: Fix 100 character limit
+
+  [ xPMo ]
+  * extra spaces in song information
+  * awk: Match exactly "album", not "albumArtist"
+
+  [ Michael Straube ]
+  * song: also quote xesam:title in get_song_dbus matching
+  * song: use get_song_dbus for rhythmbox
+  * song: fix elisa detection
+
+  [ Phuurl ]
+  * Adds scoop package manager support
+
+  [ Michael Straube ]
+  * Misc: Use comma syntax in awk to print spaces
+  * Distro: Add support for Star
+
+  [ Dylan Araps ]
+  * ascii: Added small arcolinux ascii. Closes #1146 #1147
+  * ascii: Added support for  BlueLight OS. Closes #1139
+  * docs: update
+  * docs: update
+  * song: Fix issues with non-english tags
+  * song: Fix issues with broken newlines
+  * ascii: Added support for Huayra Linux. Closes #1138
+  * ascii: Added support for Huayra Linux. Closes #1138
+  * song: Added support for netease cloud music
+  * general: Added new simple mode for script usage
+  * general: Added new simple mode for script usage
+  * general: Added new simple mode for script usage
+  * song: Fix deadbeef
+  * song: Fix qmmp
+  * song: Remove gpmdp-remote support as tool is unmaintained.
+  * song: Remove gpmdp-remote support as tool is unmaintained.
+  * song: Add netease to comment.
+  * song: Added config option to display music player
+  * ascii: Added support for Pentoo. Closes #1069
+  * ascii: Added support for command output
+  * ascii: Added support for command output
+  * ascii: Added support for command output
+  * ascii: Fixed bug when files named auto or ascii were found.
+  * ascii: Fixed bug when long line is input
+  * general: Fix issues when printing ascii
+  * simple mode: expose window size and terminal size
+  * simple mode: expose window size and terminal size
+  * packages: Don't run pkginfo on linux
+  * image: store thumbnail with path name
+  * os: Initial support for Bedrock Linux
+  * os: Initial support for Bedrock Linux
+  * terminal font [kitty]: Use kitty command instead of parsing config files. Closes #1150
+  * cleanup
+  * cleanup
+  * packages: revert pkginfo change
+  * docs: CHANGELOG
+  * docs: CHANGELOG
+  * docs: CHANGELOG
+  * docs: CHANGELOG
+  * image: higher quality thumbs. Closes #1079
+  * docs: CHANGELOG
+  * color_blocks: Fix newlines when disabled.
+  * cursor: Fix issues in urxvt with padding
+  * memory: Added option to display memory percentage.
+  * public_ip: Added configurable timeout
+  * image: fix various bugs
+  * color_blocks: Fix cursor bug
+  * distro: Remove broken distro lines
+  * version: bump
+  * version: bump
+  * resolution: If resolution is empty don't print it.
+  * ascii: Fix bedrock colors. Closes #1156
+  * image: Added support for Chafa.
+  * general: Fixed bug with line_break alternative. Closes #1157
+  * ascii: Fixed gobo linux ascii bug
+  * ascii: Fixed debian linux ascii bug
+  * ascii: Fixed void linux ascii bug
+  * image: Added support for Chafa.
+  * version: bump
+  * docs: update
+  * version: bump
+  * term_font [kitty]: Fix bug with empty config
+  * docs: update
+
+  [ Andres Santamaria Artigas ]
+  * Made variables local in get_cols function
+
+  [ xPMo ]
+  * order options "on, tiny, off"
+  * manpage: add "tiny" where supported
+
+  [ Dylan Araps ]
+  * misc: cleanup
+  * docs: update
+  * ascii: Fixed bug causing ascii files to not work.
+  * ascii: Fixed bug causing files named ascii to not work.
+  * docs: update
+  * fixed travis
+  * misc: Quote all the things
+  * general: fix image sizing in VTE terminals.
+  * docs: update
+
+  [ Muhammad Herdiansyah ]
+  * Memory [AIX]: Detect memory based on pages (like Solaris) for more accuracy
+
+  [ Dylan Araps ]
+  * general: Fix issue with URxvt and no internal border. Closes #1174
+
+  [ Grant Miller ]
+  * postmarketOS: Replace ASCII logo
+  * postmarketOS: Add small ASCII logo
+
+  [ Charlène ]
+  * Fix big Puffy ascii logo
+
+  [ Michael Straube ]
+  * term_font: fix issue with konsole font detection
+
+  [ Muhammad Herdiansyah ]
+  * CPU [Linux/ARM]: Use Hardware field directly
+
+  [ Dylan Araps ]
+  * os: Added support for Radix Linux
+
+  [ Crestwave ]
+  * packages: Specify Haiku's pkgman
+
+  [ Sibren Vasse ]
+  * Robuster kitty font parsing
+
+  [ Dylan Araps ]
+  * term_font: Fix crash when parsing Xresources. Closes #1195
+  * docs: update
+  * general: fixed gnome shell mutter issue Closes #1194
+
+  [ Muhammad Herdiansyah ]
+  * ASCII: Updated Artix ASCII with new logo
+
+  [ chrisweeksnz ]
+  * Add ascii art for Clear Linux
+
+  [ nee-san ]
+  * new logo for janus
+
+  [ Muhammad Herdiansyah ]
+  * ASCII: Update Artix logo
+
+  [ Dylan Araps ]
+  * packages: Show IRIX package manager name
+  * general: Added --no_config to disable config file creation.
+
+  [ Andrew Titmuss ]
+  * WM Theme: update for Mojave
+
+  [ zyg812 ]
+  * ASCII: Add fedora_small
+  * Update neofetch
+
+  [ jkhsjdhjs ]
+  * cache_uname: improve reading from 'SystemVersion.plist' on macOS and iOS and thus fix neofetch for iOS 11.3+
+  * cache_uname: change reading variables from 'SystemVersion.plist' as suggested in review
+
+  [ chrissx ]
+  * Added a case for displaying the Ubuntu logo for i3buntu.
+
+  [ edward-p ]
+  * Handle ${GTK2_RC_FILES} with multiple values
+
+  [ Michael Straube ]
+  * song: add strawberry player
+
+  [ jkhsjdhjs ]
+  * add device information for latest ios devices
+  * shorten too long line
+  * include Fusion/Bionic in iDevice processor names
+  * get_cpu, get_gpu, get_model: shorten iPhone OS cases
+
+  [ Ciriaco Garcia de Celis ]
+  * support uptime from Android 9+
+  * give precedence to "Hardware" entry in /proc/cpuinfo
+
+  [ Mark Greaves ]
+  * New Peppermint Logo
+
+  [ spacelike ]
+  * Use guix directly to report package count instead of counting directories
+
+  [ Muhammad Herdiansyah ]
+  * Packages [Guix/Nix]: Use if for detecting system and user packages
+
+  [ Dylan Araps ]
+  * ascii: Fix void. Closes #1244
+  * config: Show 15 color blocks by default. Closes #1224
+
+  [ Ciriaco Garcia de Celis ]
+  * uptime for Android 9+ (refactorized)
+
+  [ Dylan Araps ]
+  * song: Added support for plasma-browser-integration
+  * underline: Fix bugs with incorrect lengths
+
+  [ edward-p ]
+  * make some changes
+  * use "$GTK2_RC_FILES"
+
+  [ Michael Straube ]
+  * song: add gogglesmm
+  * song: add xnoise
+
+  [ Dylan Araps ]
+  * os: Fix HAIKU issues
+  * os: Fix HAIKU issues
+
+  [ Brad Smith ]
+  *  update Red Hat with new 2019 logo
+
+  [ Dylan Araps ]
+  * ascii: Add back old redhat logo (--ascii_distro redhat_old).
+
+  [ Ishimoto Shinobu ]
+  * januslinux is ataraxia linux!
+
+  [ Vlad Glagolev ]
+  * Retrieve public IP info via drill
+
+  [ Lucius Hu ]
+  * kitty font parsing where font name has whitespaces
+  * Work for multiple GPUs now
+  * make line below 100 columns
+
+  [ Dylan Araps ]
+  * packages: Fix DragonFlyBSD. Thanks pornguy
+  * term: Fix wrapper scripts in NixOS. Thanks Tdeo.
+  * term: Fix wrapper scripts in NixOS. Thanks Tdeo.
+  * term: Fix wrapper scripts in NixOS. Thanks Tdeo.
+  * term: Fix wrapper scripts in NixOS. Thanks Tdeo.
+  * docs: update
+  * docs: update
+
+  [ Willem Mulder ]
+  * Set nullglob for package counting
+
+  [ Renzix ]
+  * Moved guix check below /etc/os-release check
+
+  [ Weslly ]
+  * WM: Add support for yabai on macOS
+
+  [ Dylan Araps ]
+  * simple: Hide stderr by default.
+  * packages: Added package support for kiss
+
+  [ Muhammad Herdiansyah ]
+  * ASCII: Added Feren OS
+  * Linux: Move /etc/os-release directly below lsb_release
+  * Linux: Update ASCII for Sailfish OS
+
+  [ Ishimoto Shinobu ]
+  * add support for kagami package manager
+
+  [ Muhammad Herdiansyah ]
+  * ASCII: Detect all of Sailfish instead of SailfishOS
+
+  [ Michal-Szczepaniak ]
+  * Linux: Fix ASCII for Sailfish OS
+
+  [ The feren OS Dev ]
+  * Small tweak to the colours used for the Feren OS Logo
+
+  [ Carl Schwan ]
+  * The K Desktop Environment was renamed to Plasma
+  * Only use Plasma instead of KDE, if KDE version is greater equal 4
+  * Move check plasma >= 4 after de to KDE and revert some change
+  * Use bash syntax
+  * Use &&
+
+  [ Mitch Weaver ]
+  * support other versions of ksh
+
+  [ Dylan Araps ]
+  * general: Make neofetch compatible with libedit.
+  * general: Fix travis.
+
+  [ Mitch Weaver ]
+  * add bonsai linux support
+
+  [ Hans Petter Jansson ]
+  * display_image: Allow Chafa backend to stretch image to desired size
+
+  [ Dylan Araps ]
+  * Ascii: Make KISS use crux_small
+
+  [ Dawid Dziurla ]
+  * packages: Check brew on Linux
+
+  [ Ryan Hanson ]
+  * WM: Add support for Rectangle on macOS
+  * Refactored grep for macOS window manager detection
+  * Remove unnecessary -i grep flag from wm ps
+  * Removed extraneous c from chunkwm match
+
+  [ Dawid Dziurla ]
+  * packages: Quote
+
+  [ Dylan Araps ]
+  * neofetch: add kiss
+
+  [ Ryan Hanson ]
+  * Removed subshell from ps grep for macOS wm
+
+  [ Alva ]
+  * Rename GuixSD to Guix System
+
+  [ Dylan Araps ]
+  * neofetch: Fix GPU parsing. Closes #1306
+  * neofetch: bump to 6.1.0
+  * docs: update
+  * docs: update
+  * docs: update
+  * docs: update
+  * neofetch: fix wm'
+  * image: fix terminal size issues. Closes #1314
+  * neofetch: fix travis
+
+  [ Hummenix ]
+  * Added BlackArch
+
+  [ Dylan Araps ]
+  * docs: update
+
+  [ Michael Straube ]
+  * OS: Add Neptune
+
+  [ Steve Forget ]
+  * Added font detection for ConEmu
+  * Fixed line length compliance
+  * Refactoring according to reviews
+
+  [ Dylan Araps ]
+  * uptime: [haiku] Fix uptime
+
+  [ Bruno d'Arcangeli ]
+  * [PATCH] Obarun added
+
+  [ Dylan Araps ]
+  * haiku: fix various issues
+  * distro: simpler haiku
+  * os: added support for Drauger OS
+
+  [ Michael Straube ]
+  * song: add comment about cmus mpris support
+
+  [ zyg812 ]
+  * ASCII: Added and updated few small logos
+
+  [ Michael Beasley ]
+  * Add macOS Catalina
+
+  [ Tommy Chak ]
+  * Add ArcheStrike ASCII
+
+  [ Michael Straube ]
+  * OS: Add support for Cucumber Linux
+
+  [ Tommy Chak ]
+  * Resize ArchStrike ASCII, no more signature ):
+  * Change of "A" symbol colour.
+
+  [ Alex Baranowski ]
+  * Add support for EuroLinux
+  * Make EuroLinux logo smaller
+  * Fix empty line
+
+  [ Zhang Boyu ]
+  * Update neofetch
+  * Update neofetch
+  * fix per suggestion
+
+  [ Michael Straube ]
+  * song: add muine player
+  * song: add elementary music player
+
+  [ Luflosi ]
+  * Add kitty to the list of available backends
+  * Regenerate man page
+
+  [ Michael Straube ]
+  * ascii: fix Guix logo
+  * ascii: rename small Guix logo too
+  * style: fix Plasma themes
+  * Remove quotes (shellcheck)
+
+  [ Dylan Araps ]
+  * neofetch: remove uneeded quotes
+  * neofetch: remove uneeded quotes
+  * neofetch: remove uneeded quotes
+  * neofetch: remove uneeded quotes
+  * neofetch: remove uneeded quotes
+  * uptime: fix bug
+  * neofetch: remove unneeded quotes
+  * neofetch: Added initial support for HardenedBSD. Closes #1050
+  * ascii: fix Manjaro gap. Closes #1175
+  * neofetch: fix #1279
+  * neofetch: Fix urxvt font, closes #1253
+  * neofetch: nitpicks
+  * neofetch: remove unneeded quotes
+  * neofetch: Add colors for hardenedBSD
+
+  [ Yorper ]
+  * Add Cleanjaro Logo
+
+  [ Zach Pearson ]
+  * Add option to arbitrarily position color columns
+
+  [ Dylan Araps ]
+  * ascii: Added raspbian_small + misc. Closes #1355
+
+  [ Michael Straube ]
+  * ascii: add septor linux logo
+
+  [ bgkillas ]
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+
+  [ Michael Straube ]
+  * Update man page
+  * Add initial support for DE version
+  * de_version: Add MATE
+  * de_version: Add Xfce
+  * de_version: Add GNOME
+  * de_version: simplify
+  * de_version: Add Cinnamon
+  * de_version: Add Deepin
+  * de_version: Add Budgie
+  * de_version: Add LXQt
+  * de_version: Add Lumina
+  * de_version: Add Trinity
+  * de_version: Avoid awk
+  * de_version: Remove comment
+  * de_version: apply review comments
+  * Update man page
+
+  [ Dylan Araps ]
+  * neofetch: Remove bonsai package detection. Need input from upstream. Closes #1351
+
+  [ Michael Straube ]
+  * de_version: Add Unity
+
+  [ Dylan Araps ]
+  * neofetch: Fix #1364
+
+  [ Cem Keylan ]
+  * add Carbs Linux logo
+
+  [ Michael Straube ]
+  * wm: detect kwin on wayland
+  * wm: Detect Mutter on GNOME Wayland
+  * wm_theme: Remove 'GNOME Shell' from wm case
+  * wm_theme: Make Openbox config file parsing more robust
+  * wm_theme: Add support for Openbox on LXQt
+  * wm_theme: Refactor Openbox theme detection
+
+  [ Kid ]
+  * get wallpaper for Plasma desktop
+  * revert spaces
+  * fix format
+  * fix quotes
+
+  [ Michael Straube ]
+  * term_font: Fix font detection for Konsole >= 19.12.0
+  * term_font: konsole: Avoid wrong font info
+  * Remove quotes
+  * Invert test logic
+  * term_font: Fix Konsole font on openSUSE
+
+  [ Kid ]
+  * Update neofetch
+
+  [ bgkillas ]
+  * Update neofetch
+  * Update neofetch
+  * Update neofetch
+  * Add files via upload
+
+  [ Dylan Araps ]
+  * wallpaper: Fix #1379
+
+  [ Michael Straube ]
+  * ascii: Add openSUSE Leap logo
+  * Remove redundant trim
+  * song: Fix Exaile
+
+  [ Dylan Araps ]
+  * disk: clean up
+  * model: Remove ASUS OEM string
+  * docs: update
+
+  [ Michael Straube ]
+  * song: print empty tags correctly
+  * song: simplify cmus
+
+  [ Dylan Araps ]
+  * cols: Fix issues
+  * wm_theme: clean up
+  * disk: Added --disk_subtitle=none. Closes #1386
+  * neofetch: Fix Chrome OS detection. Closes #1384
+  * neofetch: Added --disk_percent. Closes #1378
+  * neofetch: Fix resolution issue. Closes #1347
+  * packages: Count nix-default. Closes #1317
+  * neofetch: Fix CPU temp on some systems
+  * neofetch: Add support for resolution in Wayland and TTY. Closes #1304 and #1301
+  * docs: update
+  * resolution: Multi monitor support for Windows. Closes #1297
+  * neofetch: Fix windows resolution. Closes #1297
+  * neofetch: Fix windows issue. Closes #1297
+  * neofetch: Fix windows issue. Closes #1297
+  * neofetch: Fix windows issue. Closes #1297
+  * neofetch: Fix windows issue. Closes #1297
+
+  [ Michael Straube ]
+  * os: Add EndeavourOS
+  * Update man page
+
+  [ Dylan Araps ]
+  * neofetch: Added --title_fqdn. Closes #1397
+  * neofetch: Fix window size issue in gnome terminal
+
+  [ Daniel Gurney ]
+  * Add patterns for AMD CPUs with numeric core counts
+
+  [ Dylan Araps ]
+  * docs: update
+
+  [ Michael Straube ]
+  * docs: update
+
+  [ Dylan Araps ]
+  * neofetch: Appimage support. Closes #1403
+
+  [ Law Zava ]
+  * Regolith linux support
+
+  [ Dylan Araps ]
+  * de: Temporary support for Regolith.
+
+  [ Law Zava ]
+  * regolith
+  * handle regolith as DE
+  * remove regolith from distro discovery
+
+  [ René Rebe ]
+  * initial t2 support
+
+  [ Gamegenorator ]
+  * Updated Linux Mint Ascii Logo
+  * Updated archive tags
+
+  [ Dylan Araps ]
+  * docs: update
+
+  [ Jeffrey Armstrong ]
+  * Minor fixes for machine model, wm, and memory on FreeMiNT
+  * Removal of special cases for FreeMiNT color settings.  Added blocking of X11 queries on FreeMiNT.
+
+  [ Dylan Araps ]
+  * neofetch: Fix GPU driver error. Closes #1411
+  * neofetch: Drop kitty win size func. Related to #1418
+  * neofetch: Fix yash shell. Closes #1421
+  * neofetch: Fix yash shell. Closes #1421
+  * docs: update
+  * docs: update
+  * docs: update
+
+ -- Dawid Dziurla <dawidd0811@gmail.com>  Sun, 08 Mar 2020 12:02:28 +0100
+
 neofetch (5.0.0-1) unstable; urgency=medium
 
   * New release
